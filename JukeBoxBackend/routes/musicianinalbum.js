@@ -40,11 +40,11 @@ router.route("/:id/sortbymusicianname").get((req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.route("/:id").delete((req, res) => {
-  MusicianInAlbum.findByIdAndDelete(req.params.id)
-    .then(() => res.json("Musician in album deleted."))
-    .catch((err) => res.status(400).json("Error: " + err));
-});
+// router.route("/:id").delete((req, res) => {
+//   MusicianInAlbum.findByIdAndDelete(req.params.id)
+//     .then(() => res.json("Musician in album deleted."))
+//     .catch((err) => res.status(400).json("Error: " + err));
+// });
 
 router.route("/update/:id").post((req, res) => {
   MusicianInAlbum.findById(req.params.id)

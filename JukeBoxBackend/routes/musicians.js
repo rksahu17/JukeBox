@@ -26,11 +26,11 @@ router.route("/:id").get((req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.route("/:id").delete((req, res) => {
-  Musician.findByIdAndDelete(req.params.id)
-    .then(() => res.json("Musician deleted."))
-    .catch((err) => res.status(400).json("Error: " + err));
-});
+// router.route("/:id").delete((req, res) => {
+//   Musician.findByIdAndDelete(req.params.id)
+//     .then(() => res.json("Musician deleted."))
+//     .catch((err) => res.status(400).json("Error: " + err));
+// });
 
 router.route("/update/:id").post((req, res) => {
   Musician.findById(req.params.id)

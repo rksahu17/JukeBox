@@ -45,11 +45,11 @@ router.route("/:id").get((req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.route("/:id").delete((req, res) => {
-  MusicAlbum.findByIdAndDelete(req.params.id)
-    .then(() => res.json("Exercise deleted."))
-    .catch((err) => res.status(400).json("Error: " + err));
-});
+// router.route("/:id").delete((req, res) => {
+//   MusicAlbum.findByIdAndDelete(req.params.id)
+//     .then(() => res.json("Exercise deleted."))
+//     .catch((err) => res.status(400).json("Error: " + err));
+// });
 
 router.route("/update/:id").post((req, res) => {
   MusicAlbum.findById(req.params.id)
